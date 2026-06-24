@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania Digital & IA: Combate às Deepfakes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Cidadania Digital & IA</h1>
+            <button id="theme-toggle" class="btn-toggle">Alternar Modo</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#deepfakes">Deepfakes</a></li>
+                <li><a href="#quiz">Teste seus Conhecimentos</a></li>
+                <li><a href="#boas-praticas">Boas Práticas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="sobre" class="card">
+            <h2>O Impacto da IA na Sociedade</h2>
+            <p>A Inteligência Artificial transformou a forma como consumimos informação. Ao mesmo tempo que traz avanços incríveis, ela facilita a criação de desinformação em massa. Ser um <strong>cidadão digital</strong> significa saber navegar de forma crítica e segura por esse novo cenário.</p>
+        </section>
+
+        <section id="deepfakes" class="card">
+            <h2>O que são Deepfakes?</h2>
+            <p>Deepfakes são vídeos, áudios ou imagens gerados por Inteligência Artificial que imitam a aparência e a voz de pessoas reais com extrema precisão. Elas costumam ser usadas para criar notícias falsas (fake news) altamente convincentes.</p>
+            
+            <h3>Como identificar mídias manipuladas:</h3>
+            <ul class="checklist">
+                <li>Visualizar piscadas de olhos não naturais ou ausência delas.</li>
+                <li>Prestar atenção a falhas na iluminação e sombras no rosto.</li>
+                <li>Observar desalinhamento nos cantos da boca e áudio dessincronizado.</li>
+                <li>Verificar se a fonte da notícia é confiável e se outros veículos a publicaram.</li>
+            </ul>
+        </section>
+
+        <section id="quiz" class="card">
+            <h2>Quiz Interativo: Você sabe identificar Fake News?</h2>
+            <p>Responda às perguntas abaixo para testar sua habilidade de identificar desinformação.</p>
+            
+            <form id="quiz-form">
+                <div class="question-group">
+                    <p>1. Se você recebeu um vídeo polêmico de um político no WhatsApp, qual deve ser o primeiro passo?</p>
+                    <label>
+                        <input type="radio" name="q1" value="errado" required> Compartilhar imediatamente com amigos e familiares.
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="certo"> Pesquisar em portais de notícias confiáveis antes de repassar.
+                    </label>
+                </div>
+
+                <div class="question-group">
+                    <p>2. Um site desconhecido afirma que a IA descobriu a cura para todas as doenças, mas nenhum outro jornal fala disso. O que isso provavelmente é?</p>
+                    <label>
+                        <input type="radio" name="q2" value="certo" required> Uma Fake News automatizada para gerar cliques.
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="errado"> Uma verdade que a mídia está tentando esconder.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Respostas</button>
+            </form>
+            <div id="quiz-result" class="result-box hidden"></div>
+        </section>
+
+        <section id="boas-praticas" class="card">
+            <h2>Boas Práticas de Segurança</h2>
+            <p>Proteja-se e ajude a manter a internet um lugar seguro:</p>
+            <ol>
+                <li><strong>Não repasse por impulso:</strong> O ecossistema de fake news vive da sua emoção.</li>
+                <li><strong>Use canais de checagem:</strong> Agências de checagem de fatos são ótimas aliadas.</li>
+                <li><strong>Configure sua privacidade:</strong> Proteja suas fotos e dados para que não sejam usados no treinamento de IAs maliciosas.</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Projeto de Educação Digital e IA</p>
+        <p>Desenvolvido como atividade de Recuperação Prática.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
