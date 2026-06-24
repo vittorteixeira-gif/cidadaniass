@@ -3,91 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital & IA: Combate às Deepfakes</title>
+    <title>Portal Cidadania Digital & Inteligência Artificial</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <div class="header-container">
-            <h1>Cidadania Digital & IA</h1>
-            <button id="theme-toggle" class="btn-toggle">Alternar Modo</button>
+    <div class="top-bar">
+        <div class="container flex-header">
+            <span>Componente Curricular: Educação Digital e IA (2026)</span>
+            <button id="theme-toggle" class="btn-toggle">🌓 Alternar Modo</button>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#deepfakes">Deepfakes</a></li>
-                <li><a href="#quiz">Teste seus Conhecimentos</a></li>
-                <li><a href="#boas-praticas">Boas Práticas</a></li>
-            </ul>
-        </nav>
+    </div>
+
+    <header>
+        <div class="container header-grid">
+            <div class="logo">
+                <h2>Cidadania<span>Digital</span></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">O Cenário</a></li>
+                    <li><a href="#deepfakes">Deepfakes</a></li>
+                    <li><a href="#impacto">Impacto Social</a></li>
+                    <li><a href="#quiz">Desafio Quiz</a></li>
+                    <li><a href="#guia">Guia de Segurança</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1>A Era da Desinformação Automatizada</h1>
+            <p>Como as ferramentas de Inteligência Artificial estão moldando o que vemos, ouvimos e acreditamos na internet. Aprenda a se proteger e a navegar criticamente.</p>
+            <a href="#quiz" class="btn-primary">Testar Meus Conhecimentos</a>
+        </div>
+    </section>
+
+    <main class="container">
         
-        <section id="sobre" class="card">
-            <h2>O Impacto da IA na Sociedade</h2>
-            <p>A Inteligência Artificial transformou a forma como consumimos informação. Ao mesmo tempo que traz avanços incríveis, ela facilita a criação de desinformação em massa. Ser um <strong>cidadão digital</strong> significa saber navegar de forma crítica e segura por esse novo cenário.</p>
+        <section id="sobre" class="main-card">
+            <div class="card-header">
+                <h2>Cidadania Digital no Século XXI</h2>
+            </div>
+            <p>Ser um cidadão digital vai muito além de saber usar redes sociais ou pesquisar no Google. Significa ter a habilidade de agir de forma ética, segura e, acima de tudo, <strong>crítica</strong> diante da enxurrada de dados que recebemos diariamente.</p>
+            <p>Com a popularização de ferramentas de IA generativa, a criação de conteúdos falsos que parecem perfeitamente reais tornou-se uma questão de segundos. A automação das chamadas <em>fake news</em> consegue espalhar boatos em escala industrial, segmentando públicos específicos para manipular opiniões.</p>
         </section>
 
-        <section id="deepfakes" class="card">
-            <h2>O que são Deepfakes?</h2>
-            <p>Deepfakes são vídeos, áudios ou imagens gerados por Inteligência Artificial que imitam a aparência e a voz de pessoas reais com extrema precisão. Elas costumam ser usadas para criar notícias falsas (fake news) altamente convincentes.</p>
+        <section id="deepfakes" class="main-card">
+            <div class="card-header">
+                <h2>O que são Deepfakes?</h2>
+            </div>
+            <p>O termo vem da junção de <em>Deep Learning</em> (Aprendizado Profundo) e <em>Fake</em> (Falso). Trata-se de uma tecnologia que utiliza redes neurais artificiais para sobrepor rostos, sintetizar vozes e clonar trejeitos de pessoas em vídeos ou áudios.</p>
             
-            <h3>Como identificar mídias manipuladas:</h3>
-            <ul class="checklist">
-                <li>Visualizar piscadas de olhos não naturais ou ausência delas.</li>
-                <li>Prestar atenção a falhas na iluminação e sombras no rosto.</li>
-                <li>Observar desalinhamento nos cantos da boca e áudio dessincronizado.</li>
-                <li>Verificar se a fonte da notícia é confiável e se outros veículos a publicaram.</li>
-            </ul>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>🔍 Como Detectar</h3>
+                    <ul>
+                        <li><strong>Olhar Fixo:</strong> Ausência de piscadas naturais ou movimentos oculares estranhos.</li>
+                        <li><strong>Contornos Borrados:</strong> Junção entre as orelhas, cabelo e o fundo da imagem com pequenas falhas de renderização.</li>
+                        <li><strong>Áudio Dessincronizado:</strong> Movimentos labiais que não batem exatamente com o som emitido.</li>
+                        <li><strong>Iluminação Inconsistente:</strong> Sombras que não mudam de posição quando a pessoa se mexe.</li>
+                    </ul>
+                </div>
+                <div class="info-box">
+                    <h3>⚠️ Tipos Comuns</h3>
+                    <ul>
+                        <li><strong>Face Swap:</strong> Substituição do rosto de uma pessoa pelo de outra.</li>
+                        <li><strong>Voice Cloning:</strong> Imitação quase perfeita da voz de figuras públicas ou familiares.</li>
+                        <li><strong>Puppetry:</strong> Controlar as expressões de uma foto estática usando os movimentos de um ator real.</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="quiz" class="card">
-            <h2>Quiz Interativo: Você sabe identificar Fake News?</h2>
-            <p>Responda às perguntas abaixo para testar sua habilidade de identificar desinformação.</p>
+        <section id="impacto" class="main-card">
+            <div class="card-header">
+                <h2>O Impacto Social e Político</h2>
+            </div>
+            <p>A desinformação gerada por IA não é apenas um problema de "fofocas de internet". Ela traz riscos estruturais graves para a nossa sociedade:</p>
+            <div class="impacto-container">
+                <blockquote class="destaque">
+                    "Quando não conseguimos mais distinguir o real do fabricado, a confiança nas instituições democráticas, no jornalismo e na própria ciência entra em colapso."
+                </blockquote>
+                <p>Os perigos incluem a manipulação de processos eleitorais através de vídeos falsos de candidatos na véspera da votação, golpes financeiros ultra-realistas utilizando a voz clonada de parentes em aplicativos de mensagem, e a destruição da reputação de indivíduos inocentes.</p>
+            </div>
+        </section>
+
+        <section id="quiz" class="main-card">
+            <div class="card-header">
+                <h2>🛡️ Quiz de Navegação Crítica</h2>
+            </div>
+            <p>Responda às questões abaixo para medir o seu nível de blindagem contra as mentiras digitais.</p>
             
             <form id="quiz-form">
-                <div class="question-group">
-                    <p>1. Se você recebeu um vídeo polêmico de um político no WhatsApp, qual deve ser o primeiro passo?</p>
-                    <label>
-                        <input type="radio" name="q1" value="errado" required> Compartilhar imediatamente com amigos e familiares.
-                    </label>
-                    <label>
-                        <input type="radio" name="q1" value="certo"> Pesquisar em portais de notícias confiáveis antes de repassar.
-                    </label>
+                <div class="question-block">
+                    <p class="question-title">1. Um áudio de um amigo chega no seu celular pedindo dinheiro emprestado com urgência por causa de um imprevisto. A voz parece idêntica à dele. O que fazer?</p>
+                    <label><input type="radio" name="q1" value="errado" required> Fazer o pix imediatamente para ajudar o amigo em apuros.</label>
+                    <label><input type="radio" name="q1" value="certo"> Ligar para esse amigo por fora do aplicativo ou fazer uma pergunta que só o verdadeiro saberia responder.</label>
                 </div>
 
-                <div class="question-group">
-                    <p>2. Um site desconhecido afirma que a IA descobriu a cura para todas as doenças, mas nenhum outro jornal fala disso. O que isso provavelmente é?</p>
-                    <label>
-                        <input type="radio" name="q2" value="certo" required> Uma Fake News automatizada para gerar cliques.
-                    </label>
-                    <label>
-                        <input type="radio" name="q2" value="errado"> Uma verdade que a mídia está tentando esconder.
-                    </label>
+                <div class="question-block">
+                    <p class="question-title">2. Qual o papel das agências de "Fact-Checking" (Checagem de Fatos) na sociedade atual?</p>
+                    <label><input type="radio" name="q2" value="certo"> Investigar, averiguar e desmentir boatos usando fontes oficiais e dados concretos.</label>
+                    <label><input type="radio" name="q2" value="errado"> Decidir o que as pessoas podem ou não publicar de acordo com opiniões pessoais.</label>
                 </div>
 
-                <button type="submit" class="btn-submit">Enviar Respostas</button>
+                <div class="question-block">
+                    <p class="question-title">3. Você vê um vídeo onde uma autoridade máxima diz algo absurdo. O vídeo tem uma resolução baixa e cortes bruscos. Qual a postura correta?</p>
+                    <label><input type="radio" name="q3" value="errado"> Compartilhar revoltado, pois o público precisa ver aquilo imediatamente.</label>
+                    <label><input type="radio" name="q3" value="certo"> Desconfiar do formato e buscar se portais de notícias sérios confirmaram aquela declaração.</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-title">4. O que significa o conceito de "Bolha Algorítmica"?</p>
+                    <label><input type="radio" name="q4" value="certo"> O fenômeno onde as redes sociais te mostram apenas conteúdos que confirmam o que você já pensa, isolando-o de visões diferentes.</label>
+                    <label><input type="radio" name="q4" value="errado"> Um vírus de computador que apaga o histórico de navegação de navegadores antigos.</label>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-title">5. Se você compartilha uma Fake News sabendo que ela é falsa apenas "pela brincadeira", qual regra de cidadania você quebra?</p>
+                    <label><input type="radio" name="q5" value="errado"> Nenhuma, pois a internet é um espaço livre para entretenimento e piadas.</label>
+                    <label><input type="radio" name="q5" value="certo"> A responsabilidade ética, pois contribui para a poluição informacional e desinformação alheia.</label>
+                </div>
+
+                <button type="submit" class="btn-submit-quiz">Avaliar Minhas Respostas</button>
             </form>
+            
             <div id="quiz-result" class="result-box hidden"></div>
         </section>
 
-        <section id="boas-praticas" class="card">
-            <h2>Boas Práticas de Segurança</h2>
-            <p>Proteja-se e ajude a manter a internet um lugar seguro:</p>
-            <ol>
-                <li><strong>Não repasse por impulso:</strong> O ecossistema de fake news vive da sua emoção.</li>
-                <li><strong>Use canais de checagem:</strong> Agências de checagem de fatos são ótimas aliadas.</li>
-                <li><strong>Configure sua privacidade:</strong> Proteja suas fotos e dados para que não sejam usados no treinamento de IAs maliciosas.</li>
+        <section id="guia" class="main-card">
+            <div class="card-header">
+                <h2>Guia Prático do Cidadão Consciente</h2>
+            </div>
+            <p>Siga este checklist mental antes de interagir ou compartilhar qualquer coisa no ambiente digital:</p>
+            <ol class="passos-lista">
+                <li><strong>Pare e Respire:</strong> Manchetes falsas apelam para o seu medo, raiva ou indignação. Não aja pelo impulso da emoção.</li>
+                <li><strong>Olhe além do Título:</strong> Muitas matérias usam títulos apelativos (clickbait) que não correspondem aos fatos reais do texto.</li>
+                <li><strong>Cheque a Data:</strong> Muitas vezes, notícias reais de anos atrás são tiradas de contexto para parecerem fatos atuais.</li>
+                <li><strong>Consulte os Buscadores:</strong> Copie o texto suspeito e jogue no Google. Se for golpe ou mentira, provavelmente já haverá alertas sobre isso.</li>
             </ol>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 - Projeto de Educação Digital e IA</p>
-        <p>Desenvolvido como atividade de Recuperação Prática.</p>
+        <div class="container footer-content">
+            <p>&copy; 2026 - Projeto Escolar de Recuperação Prática</p>
+            <p>Componente: Educação Digital e Inteligência Artificial</p>
+            <p>Desenvolvido estritamente com HTML5, CSS3 e JavaScript Puro.</p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
