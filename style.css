@@ -1,0 +1,383 @@
+/* --- Definições de Design e Sistema de Cores --- */
+:root {
+    --bg-primary: #f0f4f8;
+    --bg-card: #ffffff;
+    --text-main: #2d3748;
+    --text-muted: #718096;
+    --color-primary: #3182ce;
+    --color-primary-hover: #2b6cb0;
+    --color-accent: #319795;
+    --color-danger: #e53e3e;
+    --color-success: #38a169;
+    --nav-bg: #1a202c;
+    --nav-text: #ffffff;
+    --border-color: #e2e8f0;
+}
+
+/* Transição suave para o Modo Escuro */
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-card: #1e293b;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --color-primary: #38bdf8;
+    --color-primary-hover: #7dd3fc;
+    --color-accent: #2dd4bf;
+    --nav-bg: #020617;
+    --nav-text: #f1f5f9;
+    --border-color: #334155;
+}
+
+/* --- Reset Geral --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.7;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* --- Layout Utilitário --- */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Barra Superior de Acessibilidade --- */
+.top-bar {
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+    font-weight: 500;
+}
+
+.flex-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-toggle {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Cabeçalho e Menu (Flexbox Moderno) --- */
+header {
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    padding: 1.25rem 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: background-color 0.4s;
+}
+
+.header-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--color-primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+/* --- Seção Hero de Boas-Vindas --- */
+.hero-section {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%);
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+    margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+}
+
+/* --- Cards de Conteúdo Estruturado --- */
+.main-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.4s, border-color 0.4s;
+}
+
+.card-header {
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header h2 {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+}
+
+p {
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+}
+
+/* --- Grid Interno de Informações (Flexbox / Grid Combo) --- */
+.info-grid {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-accent);
+}
+
+.info-box h3 {
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+}
+
+.info-box ul {
+    list-style-type: none;
+}
+
+.info-box li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.info-box li::before {
+    content: "▪";
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    top: -2px;
+}
+
+/* --- Bloco de Citação Detalhado --- */
+blockquote.destaque {
+    background-color: var(--bg-primary);
+    border-left: 5px solid var(--color-primary);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--text-main);
+    border-radius: 0 8px 8px 0;
+}
+
+/* --- Formulário Avançado do Quiz --- */
+.question-block {
+    background-color: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.question-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.question-block label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background-color: var(--bg-card);
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+}
+
+.question-block label:hover {
+    background-color: rgba(49, 130, 206, 0.05);
+}
+
+.question-block input[type="radio"] {
+    margin-top: 0.3rem;
+}
+
+.btn-submit-quiz {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-submit-quiz:hover {
+    opacity: 0.9;
+}
+
+/* Caixa de Resultados */
+.result-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.result-box.sucesso {
+    background-color: #def7ec;
+    color: #03543f;
+    border: 1px solid #84e1bc;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --- Lista Ordenada Customizada --- */
+.passos-lista {
+    margin-left: 1.5rem;
+}
+
+.passos-lista li {
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+}
+
+/* --- Rodapé Institucional --- */
+footer {
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    padding: 2.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--color-primary);
+}
+
+.footer-content p {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Responsividade (Media Queries Completas) --- */
+@media (max-width: 850px) {
+    .header-grid {
+        flex-direction: column;
+        gap: 1.25rem;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .main-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    nav li {
+        width: 100%;
+        background-color: rgba(255,255,255,0.05);
+        padding: 0.5rem 0;
+        border-radius: 4px;
+    }
+}
